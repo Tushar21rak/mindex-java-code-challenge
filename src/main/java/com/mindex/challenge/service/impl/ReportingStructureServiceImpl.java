@@ -1,5 +1,4 @@
 package com.mindex.challenge.service.impl;
-
 import com.mindex.challenge.data.Employee;
 import com.mindex.challenge.data.ReportingStructure;
 import com.mindex.challenge.service.EmployeeService;
@@ -23,6 +22,11 @@ public class ReportingStructureServiceImpl implements ReportingStructureService 
     @Autowired
     EmployeeService employeeService;
 
+    /**
+     * Counts total reports under an employee
+     * @param employeeID
+     * @return ReportingStructure
+     */
     @Override
     public ReportingStructure getReportingStructure(String employeeID){
         ReportingStructure reportingStructure = new ReportingStructure();

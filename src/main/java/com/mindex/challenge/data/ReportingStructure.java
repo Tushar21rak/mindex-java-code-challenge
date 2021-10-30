@@ -1,6 +1,5 @@
 package com.mindex.challenge.data;
 
-
 public class ReportingStructure {
     String employeeID;
     int numberOfReports;

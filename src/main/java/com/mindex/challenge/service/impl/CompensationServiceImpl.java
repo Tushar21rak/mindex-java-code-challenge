@@ -1,5 +1,4 @@
 package com.mindex.challenge.service.impl;
-
 import com.mindex.challenge.dao.CompensationRepository;
 import com.mindex.challenge.data.Compensation;
 import com.mindex.challenge.service.CompensationService;
@@ -16,6 +15,11 @@ public class CompensationServiceImpl implements CompensationService {
     @Autowired
     private CompensationRepository compensationRepository;
 
+    /**
+     * Creates Compensation for the employee
+     * @param compensation
+     * @returns Compensation created object
+     */
     @Override
     public Compensation create(Compensation compensation) {
         LOG.debug("Creating Compensation [{}]", compensation);
@@ -23,6 +27,12 @@ public class CompensationServiceImpl implements CompensationService {
         return createdCompensation;
     }
 
+    /**
+     * Reads Compensation using Employee ID
+     * @param employeeId
+     * @return
+     * @throws Exception
+     */
     @Override
     public Compensation readCompensation(String employeeId) throws Exception {
         LOG.debug("Reading employee compensation by employeeId [{}]", employeeId);

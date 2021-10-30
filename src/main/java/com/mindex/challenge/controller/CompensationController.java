@@ -1,5 +1,4 @@
 package com.mindex.challenge.controller;
-
 import com.mindex.challenge.data.Compensation;
 import com.mindex.challenge.service.CompensationService;
 import org.slf4j.Logger;
@@ -17,6 +16,7 @@ public class CompensationController {
 
     @Autowired
     CompensationService compensationService;
+
 
     @PostMapping
     public ResponseEntity<Compensation> create(@RequestBody Compensation compensation){
